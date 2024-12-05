@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "poc_agent_ai"
+version = "0.1.0"
+description = ""
+authors = ["Eli Manrique"]
+
+[tool.poetry.dependencies]
+python = "<=3.12,>=3.10"
+crewai = {extras = ["tools"], version = "^0.83.0"}
+python-dotenv = "^1.0.1"
+
+[tool.poetry.scripts]
+poc_agent_ai = "poc_agent_ai.main:run"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

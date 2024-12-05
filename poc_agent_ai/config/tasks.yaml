@@ -1,0 +1,13 @@
+research_task:
+  description: "Research the API documentation and provide a summary about how to use it to answer the question {topic}."
+  expected_output: "A concise summary of the API's capabilities and usage examples about how to use it to answer the question {topic}."
+
+development_task:
+  description: "Create a functional POC project with a Next.js frontend and a NestJS backend based on the research findings and the question {topic}."
+  expected_output: "A functional project with codebase initialized for Next.js and NestJS that answers the question {topic}."
+  context: [research_task]
+
+qa_task:
+  description: "Validate the POC against the initial goals and provide feedback about how to improve it to answer the question {topic}."
+  expected_output: "A QA report detailing the validation results and feedback about how to improve it to answer the question {topic}."
+  context: [development_task]
